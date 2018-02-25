@@ -1,2 +1,3 @@
 # ics2toodledo
-convert ICS files into ToodleDo CVS import files
+Convert ICS files into ToodleDo CVS import files.
+
