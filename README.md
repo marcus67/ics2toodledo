@@ -17,6 +17,15 @@ and be tagged with `Household`.
                    /some/dir/toodledo.csv
                    
 
-## Where to the ICS Files...
+## Where To Obtain the ICS Files...
 
 * Bonn, Germany:  https://www.bonnorange.de/abfuhrtermine.html
+
+## Continuous Integration Status Overview
+
+| Status | Master | 
+|:------ |:------ |
+| Snyk Vulnerability | <a href="https://snyk.io/test/github/marcus67/ics2toodledo?targetFile=requirements.txt"><img src="https://snyk.io/test/github/marcus67/ics2toodledo/badge.svg?targetFile=requirements.txt" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/marcus67/little_brother?targetFile=requirements.txt" style="max-width:100%;"></a>
+
+Note: The vulnerability status is derived from the Python PIP packages found in `requirement.txt` which is in itself
+is generated from `pip3 freeze`.
