@@ -69,9 +69,9 @@ def process_reminders(p_reminders, p_context):
         reminder.due_datetime = datetime.datetime.combine(reminder.due_datetime, p_context.due_time.time())
 
 
-def write_csv_file(p_filename, p_reminders, p_context):
+def write_csv_file(p_reminders, p_context):
 
-    with open(p_filename, 'w', newline='') as csv_file:
+    with open(p_context.csv_filename, 'w', newline='') as csv_file:
         fieldnames = ["TASK","FOLDER","CONTEXT","GOAL","LOCATION","STARTDATE","STARTTIME","DUEDATE",
                       "DUETIME","REPEAT","LENGTH","TIMER","PRIORITY","TAG","STATUS","STAR","NOTE"]
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -150,7 +150,7 @@ def main():
         context = read_options()        
         reminders = read_icalendar_file(p_filename=context.ics_filename, p_context=context)
         process_reminders(p_reminders=reminders, p_context=context)
-        write_csv_file(p_filename="/tmp/test.csv", p_reminders=reminders, p_context=context)
+        write_csv_file(p_reminders=reminders, p_context=context)
     
     except Exception as e:
         sys.stderr.write("Exception '{exception}'\n".format(exception=str(e)))
